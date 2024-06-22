@@ -12,7 +12,7 @@ class SiteController extends Controller
         $data = [
             'title' => 'Accueil',
             'slides' => Slide::latest()->take(3)->get(),
-            'posts' => Post::orderBy('created_at', 'desc')->take(3)->where('status', 'PUBLISHED')->get()
+            'posts' => Post::orderBy('created_at', 'desc')->take(4)->where('status', 'PUBLISHED')->get()
         ];
         return view('index', $data);
     }
