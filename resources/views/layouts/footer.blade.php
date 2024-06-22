@@ -11,7 +11,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 d-flex align-items-center">
-                        <p class="mb-0"><a href="#" class="btn btn-primary py-md-4 py-3 px-md-5 px-4">Commencez Ici.</a></p>
+                        <p class="mb-0"><a href="#" class="btn btn-white py-md-4 py-3 px-md-5 px-4">Commencez Ici.</a></p>
                     </div>
                 </div>
             </div>
