@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Slide;
-use Illuminate\Http\Request;
 use TCG\Voyager\Models\Post;
 
 class SiteController extends Controller
