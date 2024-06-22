@@ -1,4 +1,4 @@
-<footer class="ftco-footer img" style="background-image: url(images/bg_1.jpg);">
+<footer class="ftco-footer img" style="background-image: url({{ asset('images/footer.webp') }});">
     <div class="overlay"></div>
     <div class="container-xl">
         <div class="row mb-5 justify-content-between">
