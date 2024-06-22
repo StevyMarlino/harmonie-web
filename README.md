@@ -21,3 +21,7 @@ php artisan storage:link
 ```bash
 composer dump-autoload
 ```
+- code couleur gabon
+> Green: #009E60 
+> Yellow: #FCD116 
+> Blue: #4664B2
