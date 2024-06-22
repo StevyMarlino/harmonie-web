@@ -105,7 +105,7 @@
             </div>
         </div>
     </section>
-    <section class="ftco-intro-2 img" style="background-image: url(images/bg_3.jpg);">
+    <section class="ftco-intro-2 img" style="background-image: url({{ asset('images/footer-1.jpg') }});">
         <div class="overlay"></div>
         <div class="container-xl">
             <div class="row justify-content-center">
