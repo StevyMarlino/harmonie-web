@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
-    <head>
-        <title>Home</title>
-        <meta name="format-detection" content="telephone=no">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="utf-8">
-        <link rel="icon" href="{{asset('vitrine/images/favicon.ico')}}" type="image/x-icon">
-        <!-- Stylesheets-->
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500">
-        <link rel="stylesheet" href="{{asset('vitrine/css/bootstrap.css')}}">
-        <link rel="stylesheet" href="{{asset('vitrine/css/fonts.css')}}">
-        <link rel="stylesheet" href="{{asset('vitrine/css/style.css')}}">
-        <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-    </head>
-    <body>
-        {{-- @include('layouts.preloader') --}}
 
-        @include('layouts.page')
+<head>
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="{{ asset('vitrine/images/favicon.ico') }}" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css"
+        href="//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500">
+    <link rel="stylesheet" href="{{ asset('vitrine/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('vitrine/css/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('vitrine/css/style.css') }}">
+    <style>
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
 
-        <div class="snackbars" id="form-output-global"></div>
+        html.ie-10 .ie-panel,
+        html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+    </style>
+</head>
 
-        <script src="{{asset('vitrine/js/core.min.js')}}"></script>
-        <script src="{{asset('vitrine/js/script.js')}}"></script>
-        
-    </body>
+<body>
+    {{-- @include('layouts.preloader') --}}
+
+    @include('layouts.page')
+
+    <div class="snackbars" id="form-output-global"></div>
+
+    <script src="{{ asset('vitrine/js/core.min.js') }}"></script>
+    <script src="{{ asset('vitrine/js/script.js') }}"></script>
+
+</body>
+
 </html>
