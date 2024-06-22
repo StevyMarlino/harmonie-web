@@ -2310,8 +2310,8 @@ textarea.form-control {
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .8;
-    background: #4f86f9;
+    opacity: .5;
+    background: #009E60;
     z-index: -1; }
   @media (max-width: 767.98px) {
     .ftco-intro-2 {
