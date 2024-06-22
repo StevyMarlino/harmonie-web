@@ -105,25 +105,4 @@
             </div>
         </div>
     </section>
-    <section class="ftco-intro-2 img" style="background-image: url({{ asset('images/footer-1.jpg') }});">
-        <div class="overlay"></div>
-        <div class="container-xl">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-10">
-                    <div class="row" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="col-md-8 d-flex align-items-center">
-                            <div>
-                                <span class="subheading">Prepare for takeoff</span>
-                                <h1 class="mb-md-0 mb-4">Looking for business opportunity?</h1>
-                            </div>
-                        </div>
-                        <div class="col-md-4 d-flex align-items-center">
-                            <p class="mb-0"><a href="#" class="btn btn-white py-md-4 py-3 px-md-5 px-4">Get
-                                    Started</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection
