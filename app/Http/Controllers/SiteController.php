@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Slide;
+use GuzzleHttp\Client;
 use TCG\Voyager\Models\Post;
+use Illuminate\Support\Facades\Http;
+use App\Http\Requests\SignatureRequest;
 
 class SiteController extends Controller
 {
