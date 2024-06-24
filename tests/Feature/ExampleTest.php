@@ -18,4 +18,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_the_word_president_show(): void
+    {
+        $response = $this->get('/mot-du-premier-president');
+
+        $response->assertStatus(200);
+    }
 }
