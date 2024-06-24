@@ -45,27 +45,6 @@
                             </a>
                         </div>
                     </div>
-
-                    {{-- <div class="sidebar-box">
-                        <h3>Publications récente</h3>
-                        @foreach ($publications as $publication)
-                            <div class="block-21 mb-4 d-flex">
-                                <a class="blog-img me-4"
-                                    style="background-image: url({{ asset(Voyager::image($publication->image)) }});"></a>
-                                <div class="text">
-                                    <h3 class="heading"><a href="{{ route('publication-details', $publication->slug) }}"> {{ $publication->title }} </a></h3>
-                                    <div class="meta">
-                                        <div><a href="{{ route('publication-details', $publication->slug) }}"><span
-                                                    class="fa fa-calendar"></span>
-                                                {{ $publication->created_at->isoFormat('MMMM DD, Y') }}</a></div>
-                                        <div><a href="{{ route('publication-details', $publication->slug) }}"><span
-                                                    class="fa fa-user"></span>
-                                                Admin</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div> --}}
                     <div class="sidebar-box">
                         <h3>Tag</h3>
                         <div class="tagcloud">
