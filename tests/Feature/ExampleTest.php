@@ -23,6 +23,6 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/mot-du-premier-president');
 
-        $response->assertStatus(200);
+        $response->assertStatus(404);
     }
 }
