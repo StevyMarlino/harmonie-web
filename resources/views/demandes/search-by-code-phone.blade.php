@@ -5,10 +5,21 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 text-center mb-5">
-                    <p class="breadcrumbs"><span class="me-2"><a href="{{ route('home') }}">Accueil <i
-                                    class="fa fa-chevron-right"></i></a></span> <span> <a href="{{ route('demandes') }}"> Vos demandes/Demarches </a><i
-                                class="fa fa-chevron-right"></i></span></p>
-                    <h1 class="mb-0 bread">Vos demandes/Demarches</h1>
+                    <p class="breadcrumbs">
+                        <span class="me-2">
+                            <a href="{{ route('home') }}">
+                                Accueil 
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </span> 
+                        <span>
+                            <a href="{{ route('demandes') }}">
+                                Vos demandes/Demarches
+                            </a> 
+                            <i class="fa fa-chevron-right"></i>
+                        </span>
+                    </p>
+                    <h1 class="mb-0 bread">Rechercher Vos demandes/Demarches</h1>
                 </div>
             </div>
         </div>
@@ -27,54 +38,22 @@
                 @endif
                 <div class="col-lg-6 sidebar pl-md-4">
                     <div class="sidebar-box bg-light rounded">
-                        
-                        <form method="POST" action="{{ route('demandes.demarches') }}" class="search-form">
+                        <form method="POST" action="{{ route('seach.code.role') }}" class="search-form">
                             @csrf
                             <h2>Recherche d'un dossier</h2>
                             <div class="form-group">
                                 <label for="code">Code du litige</label>
-                                <input type="text" name="signature" class="form-control" placeholder="Search...">
+                                <input type="text" id="code" name="role" placeholder="Entrez le code du litige"
+                                    required>
                             </div>
-                            
+                            <div class="form-group">
+                                <label for="phone">Numéro de téléphone</label>
+                                <input type="text" id="phone" name="phone"
+                                    placeholder="Entrez votre numéro de téléphone" required>
+                            </div>
                             <button type="submit" class="btn">Rechercher</button>
                         </form>
-                        <div>
-                            <strong>Code oublié ?</strong>
-                            <a href="{{ route('code.role') }}">
-                                  Autre methode
-                            </a>
-                        </div>
-                        {{-- <form method="POST" action="{{ route('demandes.demarches') }}">
-                            @csrf
-                            <div class="form-group">
-                            <input class="form-control" name="signature" placeholder="Recherche ..." type="search">
-                            <button class="btn" type="submit">
-                                <span class="icon fa fa-search"></span>
-                            </button>
-                        </div>
-                        </form> --}}
                     </div>
-
-                    {{-- <div class="sidebar-box">
-                        <h3>Publications récente</h3>
-                        @foreach ($publications as $publication)
-                            <div class="block-21 mb-4 d-flex">
-                                <a class="blog-img me-4"
-                                    style="background-image: url({{ asset(Voyager::image($publication->image)) }});"></a>
-                                <div class="text">
-                                    <h3 class="heading"><a href="{{ route('publication-details', $publication->slug) }}"> {{ $publication->title }} </a></h3>
-                                    <div class="meta">
-                                        <div><a href="{{ route('publication-details', $publication->slug) }}"><span
-                                                    class="fa fa-calendar"></span>
-                                                {{ $publication->created_at->isoFormat('MMMM DD, Y') }}</a></div>
-                                        <div><a href="{{ route('publication-details', $publication->slug) }}"><span
-                                                    class="fa fa-user"></span>
-                                                Admin</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div> --}}
                     <div class="sidebar-box">
                         <h3>Tag</h3>
                         <div class="tagcloud">
