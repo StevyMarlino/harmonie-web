@@ -32,7 +32,7 @@
                             @csrf
                             <h2>Recherche d'un dossier</h2>
                             <div class="form-group">
-                                <label for="code">Code du litige</label>
+                                <label for="code">Code de la requête</label>
                                 <input type="text" name="signature" class="form-control" placeholder="Search...">
                             </div>
                             
@@ -44,15 +44,6 @@
                                   Autre methode
                             </a>
                         </div>
-                        {{-- <form method="POST" action="{{ route('demandes.demarches') }}">
-                            @csrf
-                            <div class="form-group">
-                            <input class="form-control" name="signature" placeholder="Recherche ..." type="search">
-                            <button class="btn" type="submit">
-                                <span class="icon fa fa-search"></span>
-                            </button>
-                        </div>
-                        </form> --}}
                     </div>
 
                     {{-- <div class="sidebar-box">
@@ -94,79 +85,3 @@
         </div>
     </section>
 @endsection
-<style>
-    .btn-icon {
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    .btn-icon .icon {
-        font-size: 1.5em;
-        /* Ajustez cette taille selon vos besoins */
-        color: #333;
-        /* Ajustez la couleur selon vos besoins */
-    }
-
-    .form-group {
-        display: flex;
-        align-items: center;
-    }
-
-    .form-control {
-        flex: 1;
-        margin-left: 10px;
-        /* Ajustez l'espacement selon vos besoins */
-    }
-
-    .text-danger {
-        color: red
-    }
-
-    .search-form h2 {
-        margin-bottom: 20px;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
-
-    .form-group input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-        font-size: 16px;
-    }
-
-    .form-group input:focus {
-        border-color: #80bdff;
-        outline: none;
-    }
-
-    .btn {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        border: none;
-        border-radius: 4px;
-        color: #fff;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-        background-color: #0056b3;
-    }
-</style>
