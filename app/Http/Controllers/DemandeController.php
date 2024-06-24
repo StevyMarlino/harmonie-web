@@ -75,14 +75,14 @@ class DemandeController extends Controller
      */
     public function searchLitigeByRoleAndPhone(Request $request, Encrypter $encrypter)
     {
+        $apiUrl = env('API_SEARCH_URL');
+        $clientSearchUrl = env('CLIENT_SEARCH_URL');
+        
         // Valider la requête
         $request->validate([
             'role' => 'required|string',
             'phone' => 'required|string',
         ]);
-
-        // URL de l'API (remplacez par l'URL de votre API)
-        $apiUrl = 'http://127.0.0.1:8002/api/search-by-code-and-phone';
 
         // Créer un client GuzzleHTTP
         $client = new Client();
@@ -113,7 +113,7 @@ class DemandeController extends Controller
                 $encryptedLitige = $encrypter->encrypt(json_encode($litige));
 
                 // Rediriger vers l'URL de l'autre projet avec les données encryptées du litige
-                return redirect()->away('http://127.0.0.1:8002/client/search?litige=' . urlencode($encryptedLitige));
+                return redirect()->away($clientSearchUrl . '?litige=' . urlencode($encryptedLitige));
             } else {
                 
                 // Gérer les erreurs (par exemple, afficher un message d'erreur)

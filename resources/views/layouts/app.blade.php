@@ -4,8 +4,8 @@
     <title> {{ setting('site.title') . ' | ' . $title }} </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    @vite(['resources/css/app.css'])
     @vite(['resources/css/custum.css'])
+    @vite(['resources/css/app.css'])
 </head>
 
 <body>
