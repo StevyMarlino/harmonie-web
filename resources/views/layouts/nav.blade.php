@@ -21,7 +21,7 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">Nos Décisions</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Vos Demandes/Démarches</a></li>
+                <li class="nav-item"><a class="nav-link {{ request()->routeIs('demandes') || request()->routeIs('code.role') ? 'active' : '' }}" href="{{route('demandes')}}">Vos Demandes/Démarches</a></li>
                 <li class="nav-item"><a class="nav-link {{ request()->routeIs('publications') || request()->routeIs('publication-details') ? 'active' : '' }}" href="{{ route('publications') }}">Publications</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
             </ul>
