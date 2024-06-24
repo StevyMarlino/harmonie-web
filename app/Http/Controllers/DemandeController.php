@@ -29,13 +29,16 @@ class DemandeController extends Controller
      */
     public function search(SignatureRequest $request, Encrypter $encrypter)
     {
+        $apiUrl = env('API_SIMPLE_SEARCH');
+        $clientSearchUrl = env('CLIENT_SEARCH_URL');
+
         // Valider la requête
         $request->validate([
             'signature' => 'required|string',
         ]);
 
         // URL de l'API (remplacez par l'URL de votre API)
-        $apiUrl = 'http://127.0.0.1:8002/api/search-litige';
+        // $apiUrl = 'http://127.0.0.1:8002/api/search-litige';
 
         // Créer un client GuzzleHTTP
         $client = new Client();
@@ -53,13 +56,17 @@ class DemandeController extends Controller
                 // Récupérer directement les données du litige
                 $litige = json_decode($response->getBody()->getContents());
 
+                if(!$litige){
+                    return redirect()->back()->withErrors('Signature incorrecte ou Requête introuvable');
+                }
+
                 // Encrypter les données du litige
                 $encryptedLitige = $encrypter->encrypt(json_encode($litige));
 
                 // dd($encryptedLitige);
 
                 // Rediriger vers l'URL de l'autre projet avec les données encryptées du litige
-                return redirect()->away('http://127.0.0.1:8002/client/search?litige=' . urlencode($encryptedLitige));
+                return redirect()->away($clientSearchUrl . '?litige=' . urlencode($encryptedLitige));
             } else {
                 // Gérer les erreurs (par exemple, afficher un message d'erreur)
                 return redirect()->back()->withErrors('Requête introuvable');
@@ -77,7 +84,7 @@ class DemandeController extends Controller
     {
         $apiUrl = env('API_SEARCH_URL');
         $clientSearchUrl = env('CLIENT_SEARCH_URL');
-        
+
         // Valider la requête
         $request->validate([
             'role' => 'required|string',
