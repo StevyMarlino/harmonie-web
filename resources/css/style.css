@@ -3058,3 +3058,17 @@ textarea.form-control {
     .categories li.active a {
       color: #000000;
       font-style: italic; }
+
+
+.sticky-menu {
+  position: fixed;
+  /* transition: top 0.3s ease-in; */ /* ToDo: voir comment ajouter une bonne transition quand le navbar disparais */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-offset {
+  padding-top: 70px;
+}
