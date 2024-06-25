@@ -3059,7 +3059,6 @@ textarea.form-control {
       color: #000000;
       font-style: italic; }
 
-
 .sticky-menu {
   position: fixed;
   /* transition: top 0.3s ease-in; */ /* ToDo: voir comment ajouter une bonne transition quand le navbar disparais */
