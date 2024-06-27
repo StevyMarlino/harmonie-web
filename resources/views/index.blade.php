@@ -35,7 +35,7 @@
                             <div class="services active">
                                 <div class="icon"><span class="flaticon-accountant"></span></div>
                                 <div class="text">
-                                    <h2>Total des visiteurs : </h2>
+                                    <h2>Total des visiteurs : {{ \App\Models\Visitor::distinct('ip')->count(); }} </h2>
                                     <p class="mb-0">Le nombre de visiteurs sur la page depuis le début du site</p>
                                 </div>
                             </div>
