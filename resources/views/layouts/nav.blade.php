@@ -1,9 +1,14 @@
 <nav class="navbar navbar-expand-lg ftco-navbar-light">
     <div class="container-xl">
         <a class="navbar-brand" href="{{ route('home') }}">
-            Conseil<small> d'état.</small>
+            Conseil d'état.
             <span>Libreville &amp; Gabon</span>
         </a>
+        {{-- <h2 class="ftco-heading-2 logo d-flex">
+            <a class="navbar-brand" href="#">
+                <img src="{{ asset('images/conseil-etat-logo-header.png') }}" height="100" alt="conseil etat logo">
+            </a>
+        </h2> --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars"></span> Menu

@@ -4,7 +4,9 @@
     <title> {{ setting('site.title') . ' | ' . $title }} </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{{ URL::asset('build/assets/app-zOjkeInz.css') }}">   
+    <link rel="stylesheet" href="{{ URL::asset('build/assets/app-BRNvwAmS.css') }}">   
+    {{-- @vite(['resources/css/app.css']) --}}
+
 </head>
 
 <body>
@@ -49,6 +51,24 @@
     <script src="{{ asset('js/aos.js') }}"></script>
     <script src="{{ asset('js/datepicker.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.ftco-navbar-light');
+            const topWrapHeight = document.querySelector('.top-wrap').offsetHeight;
+    
+            function stickyMenu() {
+                if (window.scrollY > topWrapHeight) {
+                    navbar.classList.add('sticky-menu');
+                    document.body.classList.add('sticky-offset');
+                } else {
+                    navbar.classList.remove('sticky-menu');
+                    document.body.classList.remove('sticky-offset');
+                }
+            }
+            window.addEventListener('scroll', stickyMenu);
+        });
+    </script>
+    
 </body>
 
 

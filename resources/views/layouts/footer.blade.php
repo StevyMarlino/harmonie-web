@@ -26,7 +26,7 @@
             <div class="col-md-6 col-lg">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2 logo d-flex">
-                        <a class="navbar-brand" href="index-2.html">
+                        <a class="navbar-brand" href="{{ route('home') }}">
                             <img src="{{ asset('images/conseil-etat-logo.png') }}" alt="conseil etat logo">
                         </a>
                     </h2>

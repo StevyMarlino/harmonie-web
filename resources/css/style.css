@@ -26,7 +26,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", "Roboto Condensed",Arial,sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); }
 
@@ -800,7 +800,8 @@ textarea.form-control {
   border: 0; }
   .dropdown-item:hover, .dropdown-item:focus {
     color: #1e2125;
-    background-color: #4664B2; }
+    background-color: #ffffff; 
+  }
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
@@ -1570,7 +1571,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   font-weight: 400; }
 
 .top-wrap {
-  background: #009E60 !important;
+  background: #001c33 !important;
   padding: 0; }
   @media (max-width: 767.98px) {
     .top-wrap {
@@ -1583,8 +1584,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
       font-size: 36px;
       line-height: 1; }
     .top-wrap .con p {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.6); }
+      font-size: 17px;
+      font-weight: bold;
+      color: rgb(255, 255, 255); 
+    }
       .top-wrap .con p span.fa {
         color: #4f86f9; }
   .top-wrap .btn-custom {
@@ -1633,7 +1636,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         background: #4f86f9; }
 
 .ftco-navbar-light {
-  background: #1768aa !important;
+  background: #1d639c !important;
   position: absolute;
   opacity: 0.9;
   top: 44px;
@@ -1643,7 +1646,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   padding: 0; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #052c43 !important;
+      background: #1d639c !important;
       padding: 1em 0;
       position: relative;
       top: 0; } }
@@ -1675,8 +1678,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     padding-bottom: 1.7rem;
     padding-left: 25px;
     padding-right: 25px;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 400; }
+    color: rgb(255, 255, 255);
+    font-weight: 700; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link span {
       position: relative;
       display: block;
@@ -1692,9 +1695,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         padding-top: 0;
         color: #fff; } }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
-      color: #ffffff;
+      color: #13bb4b;
       position: relative;
-      background-color: #0d6efd ;
+      background-color: #ffffff ;
+      opacity: 0.5;
       /* z-index: 0;  */
     }
       @media (max-width: 991.98px) {
@@ -3054,3 +3058,16 @@ textarea.form-control {
     .categories li.active a {
       color: #000000;
       font-style: italic; }
+
+.sticky-menu {
+  position: fixed;
+  /* transition: top 0.3s ease-in; */ /* ToDo: voir comment ajouter une bonne transition quand le navbar disparais */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-offset {
+  padding-top: 70px;
+}

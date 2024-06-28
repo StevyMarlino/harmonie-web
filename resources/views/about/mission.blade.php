@@ -33,7 +33,7 @@
                         </form>
                     </div>
                     <div class="sidebar-box">
-                        <h3>Publications réscente</h3>
+                        <h3>Publications récentes</h3>
                         @foreach ($publications as $publication)
                             <div class="block-21 mb-4 d-flex">
                                 <a class="blog-img me-4"
