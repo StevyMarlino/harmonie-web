@@ -122,4 +122,5 @@ class DemandeController extends Controller
             return redirect()->back()->withErrors('Erreur de communication avec l\'API : ' . $e->getMessage());
         }
     }
+
 }

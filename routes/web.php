@@ -21,6 +21,8 @@ Route::get('/demandes-code-role',[DemandeController::class,'roleAndCode'])->name
 Route::post('/vos-demandes-demarches',[DemandeController::class,'search'])->name('demandes.demarches');
 Route::post('/seach-code-role',[DemandeController::class,'searchLitigeByRoleAndPhone'])->name('seach.code.role');
 
+Route::post('/get-count',[DemandeController::class,'getCount'])->name('get.count');
+
 Route::get('/publication-details/{slug}', [PublicationController::class,'details'])->name("publication-details");
 
 Route::get('/mission',[MissionController::class,'index'])->name('mission');

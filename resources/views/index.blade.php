@@ -27,7 +27,6 @@
     <section class="ftco-section">
         <div class="container-xl">
             <div class="row g-lg-5">
-
                 <div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"
                     data-aos-duration="1000">
                     <div class="row">
@@ -44,7 +43,7 @@
                             <div class="services">
                                 <div class="icon"><span class="flaticon-research"></span></div>
                                 <div class="text">
-                                    <h2>Total décision : </h2>
+                                    <h2>Total requêtes : {{$nombre_requete}}</h2>
                                     <p class="mb-0">Nombre de requêtes reçues depuis la création.</p>
                                 </div>
                             </div>
@@ -53,7 +52,7 @@
                             <div class="services">
                                 <div class="icon"><span class="flaticon-recession"></span></div>
                                 <div class="text">
-                                    <h2>Nombre de décisions : </h2>
+                                    <h2>Nombre de décisions : {{$nombre_decisions}}</h2>
                                     <p class="mb-0">Nombre de décisions rendues.</p>
                                 </div>
                             </div>
@@ -62,7 +61,7 @@
                             <div class="services">
                                 <div class="icon"><span class="flaticon-money"></span></div>
                                 <div class="text">
-                                    <h2>Nombre de requêtes : </h2>
+                                    <h2>Nombre de requêtes : {{$nombre_requete_traitee}} </h2>
                                     <p class="mb-0">Le nombre de requêtes traitées.</p>
                                 </div>
                             </div>
