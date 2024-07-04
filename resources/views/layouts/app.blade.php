@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{{ setting('site.description') }}">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="author" content="Conseil d'Etat Gabon">
     <meta name="keywords" content="Conseil d'Etat Gabon.">
