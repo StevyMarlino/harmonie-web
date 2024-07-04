@@ -3071,3 +3071,78 @@ textarea.form-control {
 .sticky-offset {
   padding-top: 70px;
 }
+
+.flag {
+  width: 10px;
+  margin-right: 5px;
+  margin-top: -1px;
+}
+
+.left {
+  float : left;
+}
+
+
+
+.logo-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.flag .block {
+  height: 17px;
+  display: block;
+}
+
+.flag .green {
+  background-color: #00995D;
+}
+
+.flag .yellow {
+  background-color: #FFDF1B;
+}
+
+.flag .blue {
+  background-color: #0d4181;
+}
+
+.logo {
+  padding-left: 12px;
+  height: 51px;
+}
+
+.logo a {
+  color: #FFF;
+}
+
+.logo h1 {
+  font-size: 15px;
+  line-height: 15px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #FFF;
+}
+
+.logo h2 {
+  font-size: 30px;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #FFF;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='0 0 8 8'%3e%3cpath d='M4 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 1c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zm0 2c-.28 0-.5.22-.5.5v1.5c0 .28.22.5.5.5s.5-.22.5-.5v-1.5c0-.28-.22-.5-.5-.5zm0 3c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.is-invalid:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
