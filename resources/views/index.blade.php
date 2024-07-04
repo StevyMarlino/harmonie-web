@@ -62,7 +62,7 @@
                                 <div class="icon"><span class="flaticon-money"></span></div>
                                 <div class="text">
                                     <h2>Nombre de requêtes : {{$nombre_requete_traitee}} </h2>
-                                    <p class="mb-0">Le nombre de requêtes traitées.</p>
+                                    <p class="mb-0">Nombre de requêtes traitées cette année.</p>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-7 heading-section text-center" data-aos="fade-up" data-aos-duration="1000">
                     <span class="subheading">Nos Publications</span>
-                    <h2>Publications récente</h2>
+                    <h2>Publications récentes</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
