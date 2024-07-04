@@ -6,9 +6,9 @@
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 text-center mb-5">
                     <p class="breadcrumbs"><span class="me-2"><a href="{{ route('home') }}">Accueil <i
-                                    class="fa fa-chevron-right"></i></a></span> <span> <a href="{{ route('demandes') }}"> Vos demandes/Demarches </a><i
+                                    class="fa fa-chevron-right"></i></a></span> <span> <a href="{{ route('demandes') }}"> Vos Demarches </a><i
                                 class="fa fa-chevron-right"></i></span></p>
-                    <h1 class="mb-0 bread">Vos demandes/Demarches</h1>
+                    <h1 class="mb-0 bread">Vos Demarches</h1>
                 </div>
             </div>
         </div>
@@ -30,10 +30,10 @@
                         
                         <form method="POST" action="{{ route('demandes.demarches') }}" class="search-form">
                             @csrf
-                            <h2>Recherche d'un dossier</h2>
+                            <h2>Suivre un dossier </h2>
                             <div class="form-group">
                                 <label for="code">Code de la requête</label>
-                                <input type="text" name="signature" class="form-control" placeholder="Search...">
+                                <input type="text" name="signature" class="form-control" placeholder="Rechercher...">
                             </div>
                             
                             <button type="submit" class="btn">Rechercher</button>
