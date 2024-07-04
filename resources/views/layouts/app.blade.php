@@ -11,7 +11,7 @@
     <meta name="author" content="Conseil d'Etat Gabon">
     <meta name="keywords" content="Conseil d'Etat Gabon.">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset(Voyager::image(setting('site.logo')))) }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ Voyager::image(setting('site.logo')) }}" />
     <link rel="stylesheet" href="{{ URL::asset('build/assets/app-DLwTvEU5.css') }}">   
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
