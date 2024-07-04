@@ -6,9 +6,9 @@
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 text-center mb-5">
                     <p class="breadcrumbs"><span class="me-2"><a href="{{ route('home') }}">Accueil <i
-                                    class="fa fa-chevron-right"></i></a></span> <span> <a href="{{ route('demandes') }}"> Vos Demarches </a><i
+                                    class="fa fa-chevron-right"></i></a></span> <span> <a href="{{ route('demandes') }}"> Vos Démarches </a><i
                                 class="fa fa-chevron-right"></i></span></p>
-                    <h1 class="mb-0 bread">Vos Demarches</h1>
+                    <h1 class="mb-0 bread">Vos Démarches</h1>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                         <div>
                             <strong>Code oublié ?</strong>
                             <a href="{{ route('code.role') }}">
-                                  Autre methode
+                                  Autre méthode
                             </a>
                         </div>
                     </div>
