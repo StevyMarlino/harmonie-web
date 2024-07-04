@@ -14,12 +14,12 @@
                         </span> 
                         <span>
                             <a href="{{ route('demandes') }}">
-                                Vos demandes/Demarches
+                                Vos Démarches
                             </a> 
                             <i class="fa fa-chevron-right"></i>
                         </span>
                     </p>
-                    <h1 class="mb-0 bread">Rechercher Vos demandes/Demarches</h1>
+                    <h1 class="mb-0 bread">Rechercher Vos Démarches</h1>
                 </div>
             </div>
         </div>
