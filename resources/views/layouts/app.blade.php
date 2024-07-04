@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title> {{ setting('site.title') . ' | ' . $title }} </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{{ URL::asset('build/assets/app-BRNvwAmS.css') }}">   
+    <link rel="stylesheet" href="{{ URL::asset('build/assets/app-DLwTvEU5.css') }}">   
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
     {{-- @vite(['resources/css/app.css']) --}}
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 </head>
 
@@ -15,34 +22,39 @@
             <div class="row">
                 <div class="col-md-3 d-flex align-items-center mb-2 mb-md-0">
                     <div class="con">
-                        <p class="mb-0"><span class="fa fa-phone"></span> Nous joindre: +2 392 3929 210</p>
+                        <p class="mb-0"><span class="fa fa-phone"></span> Nous joindre: {{ setting('site.join') }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex align-items-center mb-2 mb-md-0">
                     <div class="con">
-                        <p class="mb-0"><span class="fa fa-map-o"></span> Location: Libreville, Gabon</p>
+                        <p class="mb-0"><span class="fa fa-map-o"></span> Location: {{ setting('site.location') }}
+                        </p>
                     </div>
                 </div>
                 <div class="col-md d-flex justify-content-start justify-content-md-end align-items-center">
                     <p class="ftco-social d-flex">
-                        <a href="#" class="d-flex align-items-center justify-content-center"><span
+                        <a href="{{ setting('site.twitter') }}"
+                            class="d-flex align-items-center justify-content-center"><span
                                 class="fa fa-twitter"></span></a>
-                        <a href="#" class="d-flex align-items-center justify-content-center"><span
+                        <a href="{{ setting('site.facebook') }}"
+                            class="d-flex align-items-center justify-content-center"><span
                                 class="fa fa-facebook"></span></a>
-                        <a href="#" class="d-flex align-items-center justify-content-center"><span
+                        <a href="{{ setting('site.google') }}"
+                            class="d-flex align-items-center justify-content-center"><span
                                 class="fa fa-google"></span></a>
-                        <a href="#" class="d-flex align-items-center justify-content-center"><span
+                        <a href="{{ setting('site.instagram') }}"
+                            class="d-flex align-items-center justify-content-center"><span
                                 class="fa fa-instagram"></span></a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    
+
     @include('layouts.nav')
 
     @yield('content')
-    
+
     @include('layouts.footer')
 
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
@@ -55,7 +67,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const navbar = document.querySelector('.ftco-navbar-light');
             const topWrapHeight = document.querySelector('.top-wrap').offsetHeight;
-    
+
             function stickyMenu() {
                 if (window.scrollY > topWrapHeight) {
                     navbar.classList.add('sticky-menu');
@@ -68,7 +80,53 @@
             window.addEventListener('scroll', stickyMenu);
         });
     </script>
-    
+
+    <script>
+        @if (session()->has('message'))
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "showDuration": "1000",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr.success("{{ session('message') }}");
+        @endif
+
+        @if (session()->has('erreur'))
+            toastr.options = {
+                "closeButton": true,
+                "progressBar": true,
+                "positionClass": "toast-bottom-right",
+                "showDuration": "1000",
+            }
+            toastr.error("{{ session('message') }}");
+        @endif
+
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                @if (session('error'))
+                    toastr.options = {
+                        "closeButton": true,
+                        "progressBar": true,
+                        "positionClass": "toast-bottom-right",
+                        "showDuration": "1000",
+                    }
+                    toastr.error($error);
+                @endif
+            @endforeach
+        @endif
+    </script>
+
 </body>
 
 
