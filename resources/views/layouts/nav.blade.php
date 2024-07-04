@@ -41,7 +41,7 @@
                 <li class="nav-item"><a
                         class="nav-link {{ request()->routeIs('publications') || request()->routeIs('publication-details') ? 'active' : '' }}"
                         href="{{ route('publications') }}">Publications</a></li>
-                <li class="nav-item {{ request()->routeIs('contact') }}"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
+                <li class="nav-item {{ request()->routeIs('contact') ? 'active' : '' }}"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
             </ul>
         </div>
     </div>
