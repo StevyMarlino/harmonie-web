@@ -5,6 +5,13 @@
     <title> {{ setting('site.title') . ' | ' . $title }} </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ setting('site.description') }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="author" content="Conseil d'Etat Gabon">
+    <meta name="keywords" content="Conseil d'Etat Gabon.">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ setting('site.logo') }}" />
     <link rel="stylesheet" href="{{ URL::asset('build/assets/app-DLwTvEU5.css') }}">   
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
