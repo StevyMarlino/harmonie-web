@@ -1,12 +1,13 @@
 <?php
 
+use TCG\Voyager\Facades\Voyager;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DemandeController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\PublicationController;
-use App\Http\Controllers\SiteController;
 use App\Http\Controllers\WordPresidentController;
-use TCG\Voyager\Facades\Voyager;
-use Illuminate\Support\Facades\Route;
 
 /**
  * Route site gabon
@@ -27,6 +28,9 @@ Route::get('/publication-details/{slug}', [PublicationController::class,'details
 
 Route::get('/mission',[MissionController::class,'index'])->name('mission');
 Route::get('/mot-du-premier-president',[WordPresidentController::class,'index'])->name('mot.pp');
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/send',[ContactController::class, 'send'])->name('send');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
