@@ -36,11 +36,14 @@
                         </ul>
                     </div>
                 @endif
-                <div class="col-lg-6 sidebar pl-md-4">
-                    <div class="sidebar-box bg-light rounded">
+                <div class="col-lg-12 sidebar pl-md-4">
+                    {{-- <div class="sidebar-box bg-light rounded"> --}}
+                        <div class="mb-5">
+                            <h2>Votre temps étant précieux, il vous est possible de suivre votre requête sans vous déplacer. Vous pouvez donc accéder à votre dossier et d’obtenir des informations sur l’état d’avancement de celui-ci. </h2>
+                        </div>
                         <form method="POST" action="{{ route('seach.code.role') }}" class="search-form">
                             @csrf
-                            <h2>Recherche d'une requête</h2>
+                            <h2>Suivre un dossier</h2>
                             <div class="form-group">
                                 <label for="code">Code de la requête</label>
                                 <input type="text" id="code" name="role" placeholder="Entrez le code du litige"
@@ -51,9 +54,9 @@
                                 <input type="text" id="phone" name="phone"
                                     placeholder="Entrez votre numéro de téléphone" required>
                             </div>
-                            <button type="submit" class="btn">Rechercher</button>
+                            <button type="submit" class="btn btn-primary">Rechercher</button>
                         </form>
-                    </div>
+                    {{-- </div> --}}
                     <div class="sidebar-box">
                         <h3>Tag</h3>
                         <div class="tagcloud">

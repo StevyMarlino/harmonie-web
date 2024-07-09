@@ -25,25 +25,24 @@
                         </ul>
                     </div>
                 @endif
-                <div class="col-lg-6 sidebar pl-md-4">
-                    <div class="sidebar-box bg-light rounded">
-                        
-                        <form method="POST" action="{{ route('demandes.demarches') }}" class="search-form">
-                            @csrf
-                            <h2>Suivre un dossier </h2>
-                            <div class="form-group">
-                                <label for="code">Code de la requête</label>
-                                <input type="text" name="signature" class="form-control" placeholder="Rechercher...">
-                            </div>
-                            
-                            <button type="submit" class="btn">Rechercher</button>
-                        </form>
-                        <div>
-                            <strong>Code oublié ?</strong>
-                            <a href="{{ route('code.role') }}">
-                                  Autre méthode
-                            </a>
+                <div class="col-lg-12 sidebar pl-md-4">
+                    <div class="mb-5">
+                        <h2>Votre temps étant précieux, il vous est possible de suivre votre requête sans vous déplacer. Vous pouvez donc accéder à votre dossier et d’obtenir des informations sur l’état d’avancement de celui-ci. </h2>
+                    </div>
+                    <form method="POST" action="{{ route('demandes.demarches') }}" class="search-form">
+                        @csrf
+                        <h2>Suivre un dossier</h2>
+                        <label for="code" class="custum-label">Code de la requête</label>
+                        <div class="form-group">
+                            <input type="text" name="signature" class="form-control" placeholder="Suivre un dossier a partir d'une signature...">
                         </div>
+                        <div class="custum-btn col-md-3 align-items-end form-group justify-content-center">
+                            <button type="submit" class="btn custom-btn">Rechercher</button>
+                        </div>
+                    </form>
+                    <div class="mt-3">
+                        <strong>Code oublié ?</strong>
+                        <a href="{{ route('code.role') }}">Autre méthode</a>
                     </div>
                     <div class="sidebar-box">
                         <h3>Tag</h3>
@@ -64,3 +63,17 @@
         </div>
     </section>
 @endsection
+
+<style>
+    .custum-btn{
+        position: relative !important;
+        left: 40%;
+        margin-top: 3% !important;
+    }
+
+    .custum-label {
+        position: relative;
+        left: 1%;
+        margin-bottom: 1%;
+    }
+</style>
